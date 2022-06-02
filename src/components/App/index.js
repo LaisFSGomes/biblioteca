@@ -18,10 +18,25 @@ const App = () => {
     
   }, []);
 
+  const buscaInput = event => {
+    localStorage.setItem("pesquisa", event.target.value);
+    // return(event.target.value);
+  }
+
+  
+
+  const submitSearch= event => {
+    event.preventDefault();
+    return(
+      console.log(localStorage.getItem("pesquisa"))
+    );
+    
+  }
+
   return (
     <div className="App">
       <h1>My Library</h1>
-      <Search />
+      <Search buscaInput={buscaInput} submitSearch={submitSearch} />
       <List list={books.hits} />
 
     </div>

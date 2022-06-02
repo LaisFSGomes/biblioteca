@@ -1,18 +1,19 @@
 import './style.css';
 
 const Search = (props) => {
+  
   return(
-    <div  className="Search" >
+    <form onSubmit={props.submitSearch}  className="Search" >
       <input className="input-search"
         id='search'
         type = "search"
-        // onChange={props.onInputChange}
+        onChange={props.buscaInput}
       />
 
-      <button className="button-search" >
+      <button className="button-search" type="submit">
         Search
       </button>
-    </div>
+    </form>
   );
 }
 
