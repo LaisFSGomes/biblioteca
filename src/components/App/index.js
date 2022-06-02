@@ -9,34 +9,27 @@ const App = () => {
 
   const [books, setBooks] = useState('');
 
+  const fetchData = async(p) => {
+    const response = await api.get('search', {
+      params: {
+        query: p
+      }
+    });
+
+    setBooks(response?.data);
+  }
+
+ 
   useEffect(()=>{
-    const fetchData = async() => {
-      const response = await api.get(`https://hn.algolia.com/api/v1/search?query=`)
-      setBooks(response?.data);
-    }
     fetchData();
     
   }, []);
 
-  const buscaInput = event => {
-    localStorage.setItem("pesquisa", event.target.value);
-    // return(event.target.value);
-  }
-
-  
-
-  const submitSearch= event => {
-    event.preventDefault();
-    return(
-      console.log(localStorage.getItem("pesquisa"))
-    );
-    
-  }
 
   return (
     <div className="App">
       <h1>My Library</h1>
-      <Search buscaInput={buscaInput} submitSearch={submitSearch} />
+      <Search info = {fetchData} />
       <List list={books.hits} />
 
     </div>

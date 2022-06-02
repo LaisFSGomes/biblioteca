@@ -1,17 +1,33 @@
+import {useState} from 'react';
 import './style.css';
 
 const Search = (props) => {
+
+  const [search, setSearch] = useState('');
+
+
+  const buscaInput = event => {
+    setSearch(event.target.value);
+  }
+
+  const submitSearch= event => {
+    event.preventDefault();
+    props.info(search);
+  }
   
   return(
-    <form onSubmit={props.submitSearch}  className="Search" >
+    <form onSubmit={submitSearch} className="Search" >
       <input className="input-search"
         id='search'
         type = "search"
-        onChange={props.buscaInput}
+        onChange={buscaInput}
       />
 
-      <button className="button-search" type="submit">
-        Search
+      <button 
+        className="button-search" 
+        type="submit"
+        >
+          Search
       </button>
     </form>
   );
