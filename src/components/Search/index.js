@@ -2,9 +2,7 @@ import {useState} from 'react';
 import './style.css';
 
 const Search = (props) => {
-
   const [search, setSearch] = useState('');
-
 
   const buscaInput = event => {
     setSearch(event.target.value);
@@ -14,7 +12,7 @@ const Search = (props) => {
     event.preventDefault();
     props.info(search);
   }
-  
+
   return(
     <form onSubmit={submitSearch} className="Search" >
       <input className="input-search"
@@ -22,15 +20,10 @@ const Search = (props) => {
         type = "search"
         onChange={buscaInput}
       />
-
-      <button 
-        className="button-search" 
-        type="submit"
-        >
+      <button className="button-search" type="submit">
           Search
       </button>
     </form>
   );
 }
-
 export default Search;
