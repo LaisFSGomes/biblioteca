@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+
 import App from './components/App/index.js';
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const title = process.env.REACT_APP_TITLE;

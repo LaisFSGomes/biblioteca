@@ -14,13 +14,13 @@ const Search = (props) => {
   }
 
   return(
-    <form onSubmit={submitSearch} className="Search" >
-      <input className="input-search"
+    <form onSubmit={submitSearch} className='Search' >
+      <input className='input-search'
         id='search'
-        type = "search"
+        type = 'search'
         onChange={buscaInput}
       />
-      <button className="button-search" type="submit">
+      <button className='button-search' type='submit'>
           Search
       </button>
     </form>

@@ -1,7 +1,7 @@
 import './style.css';
 const Footer = (props) => {
   return(
-    <section className="footer">
+    <section className='footer'>
       <p>
       {props.info}
       </p>

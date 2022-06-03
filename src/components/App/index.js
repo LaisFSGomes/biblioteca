@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import './style.css';
 import List from '../List/index.js';
 import Search from '../Search/index.js';
 import Footer from '../Footer/index.js';
 import api from '../../utils/api.js';
+import './style.css';
 
 const App = (props) => {
   const [books, setBooks] = useState('');
@@ -13,7 +13,6 @@ const App = (props) => {
         query: p
       }
     });
-
     setBooks(response?.data);
   }
 
