@@ -1,6 +1,6 @@
-.Search{
+.Search {
   padding: 1%;
-  margin: 5% 10%; 
+  margin: 5% 10%;
   border-radius: 10px;
   justify-content: center;
   text-align: center;
@@ -10,7 +10,7 @@
   width: 70%;
   color: #595757;
   font-weight: bold;
-  font-family: 'Manjari', sans-serif;
+  font-family: "Manjari", sans-serif;
   padding: 1%;
 }
 
@@ -18,7 +18,7 @@
   width: 20%;
   color: #595757;
   font-weight: bold;
-  font-family: 'Manjari', sans-serif;
+  font-family: "Manjari", sans-serif;
   margin: 0% 2%;
   padding: 1% 5%;
 }
