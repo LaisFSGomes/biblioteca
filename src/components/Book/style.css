@@ -1,18 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Manjari&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manjari&display=swap");
 .item {
   width: auto;
   height: auto;
-  background: #72B5A4;
+  background: #72b5a4;
   padding: 1%;
-  margin: 5% 10%; 
+  margin: 5% 10%;
   border-radius: 10px;
   justify-content: center;
   text-align: center;
 }
 
-.item h2  {
+.item h2 {
   font-weight: 500;
-  
 }
 
 .item h3 {
@@ -20,7 +19,7 @@
   color: #f0f0f0f6;
 }
 
-.item h3 a{
+.item h3 a {
   font-weight: 300;
   font-size: 80%;
   color: #f0f0f0f6;
